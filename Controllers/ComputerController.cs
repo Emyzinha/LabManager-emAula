@@ -23,6 +23,9 @@ public class ComputerController : Controller
 
        }
 
+       public IActionResult Delete(int id){
+        _context.Computers.Remove(_context.Computers.Find(id));
+
        return View(computer);
     }
 }
