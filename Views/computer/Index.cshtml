@@ -26,10 +26,19 @@ else{
                     <td>@computer.Id</td>
                     <td>@computer.Ram</td>
                     <td>@computer.Processor</td>
-                    <td><a class= "btn btn-primary btn-sm"
-                      href="/Computer/Show/@computer.Id"> ver</a>
+                    <td> /*<a class= "btn btn-primary btn-sm"
+                      href="/Computer/Show/@computer.Id"> ver</a> */
+
+                      <a asp-controller="Computer"
+                        asp-action="Show" 
+                        asp-route-id="@computer.Id"> Ver</a> 
+
+                    /*<a class = "btn btn-danger" href = "/Computer/Delete/@computer.Id">Delete</a> */ 
+                      <a asp-controller="Computer"
+                        asp-action="Delete" 
+                        asp-route-id="@computer.Id"> Ver</a> 
                         
-                    <a class = "btn btn-danger" href = "/Computer/Delete/@computer.Id">Delete</a>    
+
                   
                 </tr>
             }
